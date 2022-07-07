@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+
+h1 {
+    text-align: center;
+}
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main a {
+    margin: 5px;
+}
