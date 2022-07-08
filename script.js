@@ -21,3 +21,4 @@ fetchApi(randomCatURL);
 catBtn.addEventListener('click', function() {
     window.location.href = 'cat.html'
 })
+Bandit0412?
