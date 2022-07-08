@@ -8,7 +8,7 @@ var breedCard = document.getElementById('breed-card')
 
 function renderCard(event){
   event.preventDefault()
-  var breed = search.value
+  var breed = search.value.trim();
   var requestUrl = 'https://api.thedogapi.com/v1/breeds/search?q=' + breed + '&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854';
 
   fetch(requestUrl)
