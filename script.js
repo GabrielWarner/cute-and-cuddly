@@ -1,8 +1,5 @@
 var catBtn = document.getElementById('catBtn')
-<<<<<<< HEAD
-=======
 var dogBtn = document.getElementById('dogBtn')
->>>>>>> 5aa319c0cd55475c26cf587c58cbb905667ef1c5
 var mainEl = document.getElementById('main')
 var button = document.getElementById('load')
 
@@ -17,14 +14,10 @@ dogBtn.addEventListener('click', function() {
     window.location.href = 'doghtml.html'
 })
 
-<<<<<<< HEAD
 button.addEventListener('click', renderCard)
-=======
-
->>>>>>> 5aa319c0cd55475c26cf587c58cbb905667ef1c5
 
 
-<<<<<<< HEAD
+
   var dogAPI = "3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854"
   var requestUrl = 'https://api.thedogapi.com/v1/breeds/search?q=golden&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854';
 
@@ -59,7 +52,5 @@ button.addEventListener('click', renderCard)
       }
       renderimage(data)
     });
-}
-=======
->>>>>>> 5aa319c0cd55475c26cf587c58cbb905667ef1c5
+
 
