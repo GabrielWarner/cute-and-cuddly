@@ -1,3 +1,5 @@
+var dogBtn = document.getElementById('dogBtn')
+
 function renderCard(){
 
   var dogAPI = "3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854"
@@ -37,3 +39,6 @@ function renderCard(){
 }
 
 button.addEventListener('click', renderCard)
+dogBtn.addEventListener('click', function() {
+    window.location.href = "cat.html"
+})
