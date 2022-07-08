@@ -1,19 +1,26 @@
-var dogBtn = document.getElementById('dogBtn')
 
-function renderCard(){
+var search = document.getElementById('search-input')
+var breedCardForm = document.getElementById('breed-card-form')
+var mainEl = document.getElementById('main')
+var breedCard = document.getElementById('breed-card')
 
-  var dogAPI = "3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854"
-  var requestUrl = 'https://api.thedogapi.com/v1/breeds/search?q=golden&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854';
+
+
+function renderCard(event){
+  event.preventDefault()
+  var breed = search.value
+  var requestUrl = 'https://api.thedogapi.com/v1/breeds/search?q=' + breed + '&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854';
 
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
+      breedCard.innerHTML = ""
       console.log(data)
       var div = document.createElement('div')
       div.textContent = data[0].name
-      mainEl.append(div)
+      breedCard.append(div)
       
       //grab image id and then fetch image
       function renderimage(data){
@@ -31,14 +38,12 @@ function renderCard(){
             console.log(data)
             var image = document.createElement("img")
             image.setAttribute("src", imgURL)
-            mainEl.append(image)
+            breedCard.append(image)
           });
       }
       renderimage(data)
     });
 }
 
-button.addEventListener('click', renderCard)
-dogBtn.addEventListener('click', function() {
-    window.location.href = "cat.html"
-})
+
+breedCardForm.addEventListener('submit', renderCard)
