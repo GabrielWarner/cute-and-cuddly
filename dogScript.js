@@ -38,11 +38,19 @@ function renderCard(event){
             return response.json();
           })
           .then(function (data) {
+            //create image
             imgURL = data.url
             console.log(data)
             var image = document.createElement("img")
             image.setAttribute("src", imgURL)
             image.setAttribute("class", "col s6")
+
+            //create div that sits inside of Breed Card and holds the dogs info
+            var innerCard = document.createElement('div')
+            innerCard.textContent = 'TESTTEST'
+            innerCard.setAttribute("class", "col s6 offset-s6")
+            div.append(innerCard)
+
 
             div.append(image)
           });
