@@ -1,7 +1,9 @@
+
 var search = document.getElementById('search-input')
 var breedCardForm = document.getElementById('breed-card-form')
 var mainEl = document.getElementById('main')
 var breedCard = document.getElementById('breed-card')
+
 
 
 function renderCard(event){
@@ -42,5 +44,6 @@ function renderCard(event){
       renderimage(data)
     });
 }
+
 
 breedCardForm.addEventListener('submit', renderCard)
