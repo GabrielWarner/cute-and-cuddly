@@ -19,7 +19,11 @@ function renderCard(event){
       breedCard.innerHTML = ""
       console.log(data)
       var div = document.createElement('div')
-      div.textContent = data[0].name
+      div.setAttribute("class", "row")
+      var breedName = document.createElement('h3')
+      breedName.setAttribute("class", "col s12")
+      breedName.textContent = data[0].name
+      div.append(breedName)
       breedCard.append(div)
       
       //grab image id and then fetch image
@@ -38,7 +42,9 @@ function renderCard(event){
             console.log(data)
             var image = document.createElement("img")
             image.setAttribute("src", imgURL)
-            breedCard.append(image)
+            image.setAttribute("class", "col s6")
+
+            div.append(image)
           });
       }
       renderimage(data)
