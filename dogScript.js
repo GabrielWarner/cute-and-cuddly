@@ -25,6 +25,11 @@ function renderCard(event){
       console.log(data)
       //creating div that will hold the image and secondary div that will hold the information
       var div = document.createElement('div')
+      //creating to divs
+      var divLeft = document.createElement('div')
+      divLeft.setAttribute("class", "left col s6")
+      var divRight = document.createElement('div')
+      divRight.setAttribute("class", "right col s6")
       div.setAttribute("class", "row")
       //creating h3 element that holds the breeds name
       var breedName = document.createElement('h3')
@@ -34,6 +39,8 @@ function renderCard(event){
       //appending 
       div.append(breedName)
       breedCard.append(div)
+      breedCard.append(divLeft)
+      breedCard.append(divRight)
       
       //grab image id and then fetch image
       function renderimage(data){
@@ -53,16 +60,14 @@ function renderCard(event){
             //creating image element so i can then set its src attribute to the URL i just made
             var image = document.createElement("img")
             image.setAttribute("src", imgURL)
-            image.setAttribute("class", "col s6")
-
+            image.setAttribute("class", "col s12")
             //create div that sits inside of Breed Card and holds all of the do
             var innerCard = document.createElement('div')
             innerCard.textContent = 'TESTTEST'
             innerCard.setAttribute("class", "col s6")
-            div.append(innerCard)
-
-
-            div.append(image)
+            
+            divLeft.append(image)
+            divRight.append(innerCard)
           });
       }
       renderimage(data)
