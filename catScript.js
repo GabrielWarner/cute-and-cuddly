@@ -1,13 +1,15 @@
 var cat = document.getElementById('catImage')
 var dogMode = document.getElementById('catBtn')
+var dropdownEl = document.getElementById('dropdown1')
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    //var instances = M.Dropdown.init(elems, options);
-});
+var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
+    
+]
+$('.dropdown-trigger').dropdown();
 
 var breed = "beng"
 var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='+ breed
+var catBreed = 'https://api.thecatapi.com/v1/breeds'
 
 function catPicByBreed() {
     
@@ -19,7 +21,32 @@ function catPicByBreed() {
     cat.append(catImg)
 }
 
+function getCatBreed() {
+    
+    //var catImg = document.createElement('img')
+    fetch(catBreed)
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    
+    
+}
+
+function generateDropdown() {
+    for (var i = 0; i < breedArr.length; i++) {
+        //console.log(breedList[i].image.url)
+        var breedA = document.createElement('a')
+        var breedLi = document.createElement('li')
+        breedA.innerHTML = breedArr[i]
+        breedLi.append(breedA)
+        dropdownEl.append(breedLi)
+    }
+}
+
 catPicByBreed()
+getCatBreed()
+generateDropdown()
+
+
 
 dogMode.addEventListener('click', function() {
     window.location.href = "doghtml.html"
