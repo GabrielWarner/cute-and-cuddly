@@ -1,4 +1,5 @@
 var cat = document.getElementById('catImage')
+var dogMode = document.getElementById('catBtn')
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
@@ -19,3 +20,7 @@ function catPicByBreed() {
 }
 
 catPicByBreed()
+
+dogMode.addEventListener('click', function() {
+    window.location.href = "doghtml.html"
+})
