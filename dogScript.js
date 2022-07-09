@@ -1,7 +1,12 @@
 
 var dogBtn = document.getElementById('dogBtn')
 var mainEl = document.getElementById('id')
+
+var catMode = document.getElementById('dogBtn')
+
+
 var compBtn = document.getElementById('compareBtn')
+
 var search = document.getElementById('search-input')
 var breedCardForm = document.getElementById('breed-card-form')
 var mainEl = document.getElementById('main')
@@ -77,6 +82,9 @@ function renderCard(event){
     });
 }
 
+catMode.addEventListener('click', function() {
+  window.location.href = "cat.html"
+})
 
 breedCardForm.addEventListener('submit', renderCard)
 
