@@ -7,7 +7,22 @@ var catsImage = document.getElementById("catImage");
 var catsName = document.getElementById("catNameApi");
 var catsLife = document.getElementById("catLifeApi");
 var catsInfo = document.getElementById("catInfoApi");
+<<<<<<< HEAD
 var homeMode = document.getElementById('homeBtn')
+=======
+var homeMode = document.getElementById('homeBtn');
+var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
+    'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
+    'Bombay', 'British Longhair', 'British Shorthair', 'Burmese', 'Burmilla', 'California Spangled',
+    'Chantilly-Tiffany', 'Chartreux', 'Chausie', 'Cheetoh', 'Colorpoint Shorthair', 'Cornish Rex',
+    'Cymric', 'Cyprus', 'Devon Rex', 'Donskoy', 'Dragon Li', 'Egyptian Mau', 'European Burmese',
+    'Exotic Shorthair', 'Havana Brown', 'Himalayan', 'Japanese Bobtail', 'Javanese', 'Khao Manee',
+    'Korat', 'Kurilian', 'LaPerm', 'Maine Coon', 'Malayan', 'Manx', 'Munchkin', 'Nebelung',
+    'Norwegian Forest Cat', 'Ocicat', 'Oriental', 'Persian', 'Pixie-bob', 'Ragamuffin', 'Ragdoll',
+    'Russian Blue', 'Savannah', 'Scottish Fold', 'Selkirk Rex', 'Siamese', 'Siberian', 'Singapura',
+    'Snowshoe', 'Somali', 'Sphynx', 'Tonkinese', 'Toyger', 'Turkish Angora', 'Turkish Van', 'York Chocolate'
+];
+>>>>>>> 226e9dc53a94c8e2845106f5c2e227c64cb9ccc8
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -52,9 +67,13 @@ function rndmDog(){
 }
 
 function rndmCat() {
-  var rndmsomthng = getRandomInt(1, 60)
+  var rndmsomthng = getRandomInt(1, 67)
   var requestUrl =
+<<<<<<< HEAD
     "https://api.thecatapi.com/v1/images/search?breed_id="+rndmsomthng+"&api_key=f0f11a12-d477-4d44-ae91-5f773cb8183f";
+=======
+    "https://api.thecatapi.com/v1/images/search?breeds_id="+breedArr[rndmsomthng]+"&api_key=f0f11a12-d477-4d44-ae91-5f773cb8183f";
+>>>>>>> 226e9dc53a94c8e2845106f5c2e227c64cb9ccc8
 
   fetch(requestUrl)
     .then(function (res) {
@@ -84,6 +103,10 @@ function rndmCat() {
 rndmCat();
 rndmDog();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 226e9dc53a94c8e2845106f5c2e227c64cb9ccc8
   homeMode.addEventListener('click', function() {
     window.location.href = "index.html"
 })
