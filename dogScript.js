@@ -4,7 +4,7 @@ var mainEl = document.getElementById('id')
 
 var catMode = document.getElementById('dogBtn')
 
-
+var homeMode = document.getElementById('homeBtn')
 var compBtn = document.getElementById('compareBtn')
 
 var search = document.getElementById('search-input')
@@ -119,4 +119,8 @@ dogBtn.addEventListener('click', function() {
 
 compBtn.addEventListener('click', function() {
   window.location.href = 'compare.html'
+})
+
+homeMode.addEventListener('click', function() {
+  window.location.href = "index.html"
 })
