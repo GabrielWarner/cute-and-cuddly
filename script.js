@@ -2,6 +2,7 @@ var catBtn = document.getElementById('catBtn')
 var dogBtn = document.getElementById('dogBtn')
 var mainEl = document.getElementById('main')
 var button = document.getElementById('load')
+var compBtn = document.getElementById('compareBtn')
 
 
 
@@ -12,6 +13,10 @@ catBtn.addEventListener('click', function() {
 
 dogBtn.addEventListener('click', function() {
     window.location.href = 'doghtml.html'
+})
+
+compBtn.addEventListener('click', function() {
+  window.location.href = 'compare.html'
 })
 
 

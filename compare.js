@@ -6,6 +6,7 @@ var catsImage = document.getElementById('catImage')
 var catsName = document.getElementById('catNameApi')
 var catsLife = document.getElementById('catLifeApi')
 var catsInfo = document.getElementById('catInfoApi')
+var homeMode = document.getElementById('homeBtn')
 
 
 function rndmDog(){
@@ -105,5 +106,10 @@ function rndmDog(){
       });
   }
 
+
   rndmCat()
   rndmDog()
+
+  homeMode.addEventListener('click', function() {
+    window.location.href = "index.html"
+})
