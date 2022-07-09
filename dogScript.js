@@ -1,6 +1,7 @@
 
 var dogBtn = document.getElementById('dogBtn')
 var mainEl = document.getElementById('id')
+var catMode = document.getElementById('dogBtn')
 
 var search = document.getElementById('search-input')
 var breedCardForm = document.getElementById('breed-card-form')
@@ -77,5 +78,8 @@ function renderCard(event){
     });
 }
 
+catMode.addEventListener('click', function() {
+  window.location.href = "cat.html"
+})
 
 breedCardForm.addEventListener('submit', renderCard)
