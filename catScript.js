@@ -4,12 +4,22 @@ var dropdownEl = document.getElementById('dropdown1')
 var compBtn = document.getElementById('compareBtn')
 var homeMode = document.getElementById('homeBtn')
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
-    
+    'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
+    'Bombay', 'British Longhair', 'British Shorthair', 'Burmese', 'Burmilla', 'California Spangled',
+    'Chantilly-Tiffany', 'Chartreux', 'Chausie', 'Cheetoh', 'Colorpoint Shorthair', 'Cornish Rex',
+    'Cymric', 'Cyprus', 'Devon Rex', 'Donskoy', 'Dragon Li', 'Egyptian Mau', 'European Burmese',
+    'Exotic Shorthair', 'Havana Brown', 'Himalayan', 'Japanese Bobtail', 'Javanese', 'Khao Manee',
+    'Korat', 'Kurilian', 'LaPerm', 'Maine Coon', 'Malayan', 'Manx', 'Munchkin', 'Nebelung',
+    'Norwegian Forest Cat', 'Ocicat', 'Oriental', 'Persian', 'Pixie-bob', 'Ragamuffin', 'Ragdoll',
+    'Russian Blue', 'Savannah', 'Scottish Fold', 'Selkirk Rex', 'Siamese', 'Siberian', 'Singapura',
+    'Snowshoe', 'Somali', 'Sphynx', 'Tonkinese', 'Toyger', 'Turkish Angora', 'Turkish Van', 'York Chocolate'
 ]
+
+var breedId = []
+var userSearch = 'beng'
 $('.dropdown-trigger').dropdown();
 
-var breed = "beng"
-var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='+ breed
+var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='+ userSearch
 var catBreed = 'https://api.thecatapi.com/v1/breeds'
 
 function catPicByBreed() {
@@ -27,12 +37,18 @@ function getCatBreed() {
     //var catImg = document.createElement('img')
     fetch(catBreed)
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+        for (var i = 0; i < data.length; i++) {
+            breedId.push(data[i].id)
+        }
+    })
+    console.log(breedId)
     
     
 }
 
 function generateDropdown() {
+
     for (var i = 0; i < breedArr.length; i++) {
         //console.log(breedList[i].image.url)
         var breedA = document.createElement('a')
@@ -40,8 +56,32 @@ function generateDropdown() {
         breedA.innerHTML = breedArr[i]
         breedLi.append(breedA)
         dropdownEl.append(breedLi)
+        breedLi.addEventListener('click', function() {
+            userSearch = breedArr[i];
+            breedIdByName(userSearch)
+        })
     }
 }
+
+function breedIdByName(breed) {
+    var theId = ""
+    console.log(breed)
+    fetch(catBreed)
+    .then((response) => response.json())
+    .then((data) => {
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].name === breed) {
+                theId = data[i].id
+            }
+        }
+    })
+
+    // for (var i = 0; i < breedArr.length; i++) {
+    //     if (breed === )
+    // }
+}
+
+
 
 catPicByBreed()
 getCatBreed()
