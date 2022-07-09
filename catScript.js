@@ -4,23 +4,27 @@ var dropdownEl = document.getElementById('dropdown1')
 var compBtn = document.getElementById('compareBtn')
 var homeMode = document.getElementById('homeBtn')
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
-    'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
-    'Bombay', 'British Longhair', 'British Shorthair', 'Burmese', 'Burmilla', 'California Spangled',
-    'Chantilly-Tiffany', 'Chartreux', 'Chausie', 'Cheetoh', 'Colorpoint Shorthair', 'Cornish Rex',
-    'Cymric', 'Cyprus', 'Devon Rex', 'Donskoy', 'Dragon Li', 'Egyptian Mau', 'European Burmese',
-    'Exotic Shorthair', 'Havana Brown', 'Himalayan', 'Japanese Bobtail', 'Javanese', 'Khao Manee',
-    'Korat', 'Kurilian', 'LaPerm', 'Maine Coon', 'Malayan', 'Manx', 'Munchkin', 'Nebelung',
-    'Norwegian Forest Cat', 'Ocicat', 'Oriental', 'Persian', 'Pixie-bob', 'Ragamuffin', 'Ragdoll',
-    'Russian Blue', 'Savannah', 'Scottish Fold', 'Selkirk Rex', 'Siamese', 'Siberian', 'Singapura',
-    'Snowshoe', 'Somali', 'Sphynx', 'Tonkinese', 'Toyger', 'Turkish Angora', 'Turkish Van', 'York Chocolate'
+'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
+'Bombay', 'British Longhair', 'British Shorthair', 'Burmese', 'Burmilla', 'California Spangled',
+'Chantilly-Tiffany', 'Chartreux', 'Chausie', 'Cheetoh', 'Colorpoint Shorthair', 'Cornish Rex',
+'Cymric', 'Cyprus', 'Devon Rex', 'Donskoy', 'Dragon Li', 'Egyptian Mau', 'European Burmese',
+'Exotic Shorthair', 'Havana Brown', 'Himalayan', 'Japanese Bobtail', 'Javanese', 'Khao Manee',
+'Korat', 'Kurilian', 'LaPerm', 'Maine Coon', 'Malayan', 'Manx', 'Munchkin', 'Nebelung',
+'Norwegian Forest Cat', 'Ocicat', 'Oriental', 'Persian', 'Pixie-bob', 'Ragamuffin', 'Ragdoll',
+'Russian Blue', 'Savannah', 'Scottish Fold', 'Selkirk Rex', 'Siamese', 'Siberian', 'Singapura',
+'Snowshoe', 'Somali', 'Sphynx', 'Tonkinese', 'Toyger', 'Turkish Angora', 'Turkish Van', 'York Chocolate'
 ]
 
+var randomCatBreedLength = Math.floor(Math.random() * breedArr.length)
 var breedId = []
 var userSearch = 'beng'
 $('.dropdown-trigger').dropdown();
 
 var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='+ userSearch
 var catBreed = 'https://api.thecatapi.com/v1/breeds'
+
+
+
 
 function catPicByBreed() {
     
@@ -47,21 +51,21 @@ function getCatBreed() {
     
 }
 
-function generateDropdown() {
+// function generateDropdown() {
 
-    for (var i = 0; i < breedArr.length; i++) {
-        //console.log(breedList[i].image.url)
-        var breedA = document.createElement('a')
-        var breedLi = document.createElement('li')
-        breedA.innerHTML = breedArr[i]
-        breedLi.append(breedA)
-        dropdownEl.append(breedLi)
-        breedLi.addEventListener('click', function() {
-            userSearch = breedArr[i];
-            breedIdByName(userSearch)
-        })
-    }
-}
+//     for (var i = 0; i < breedArr.length; i++) {
+//         //console.log(breedList[i].image.url)
+//         var breedA = document.createElement('a')
+//         var breedLi = document.createElement('li')
+//         breedA.innerHTML = breedArr[i]
+//         breedLi.append(breedA)
+//         dropdownEl.append(breedLi)
+//         // breedLi.addEventListener('click', function() {
+//         //     userSearch = breedArr[i];
+//         //     breedIdByName(userSearch)
+//         // })
+//     }
+// }
 
 function breedIdByName(breed) {
     var theId = ""
@@ -74,6 +78,7 @@ function breedIdByName(breed) {
                 theId = data[i].id
             }
         }
+        console.log(theId)
     })
 
     // for (var i = 0; i < breedArr.length; i++) {
@@ -86,6 +91,7 @@ function breedIdByName(breed) {
 catPicByBreed()
 getCatBreed()
 generateDropdown()
+breedIdByName("bengal")
 
 
 
