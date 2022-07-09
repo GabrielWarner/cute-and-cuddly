@@ -1,7 +1,11 @@
 
 var dogBtn = document.getElementById('dogBtn')
 var mainEl = document.getElementById('id')
+
 var catMode = document.getElementById('dogBtn')
+
+
+var compBtn = document.getElementById('compareBtn')
 
 var search = document.getElementById('search-input')
 var breedCardForm = document.getElementById('breed-card-form')
@@ -83,3 +87,11 @@ catMode.addEventListener('click', function() {
 })
 
 breedCardForm.addEventListener('submit', renderCard)
+
+dogBtn.addEventListener('click', function() {
+  window.location.href = "cat.html"
+})
+
+compBtn.addEventListener('click', function() {
+  window.location.href = 'compare.html'
+})
