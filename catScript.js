@@ -34,6 +34,7 @@ var catBreed = 'https://api.thecatapi.com/v1/breeds'
 
 function makeCatCard(event) {
     event.preventDefault()
+    cat.innerHTML = ""
     console.log('hi')
     var breed = searchInput.value.trim().toLowerCase()
     var id = ""
@@ -132,13 +133,11 @@ inputEl.addEventListener('submit', makeCatCard)
 //     //     if (breed === )
 //     // }
 
-<<<<<<< HEAD
 // catPicByBreed()
 // getCatBreed()
 // generateDropdown()
 // breedIdByName("bengal")
     // }
-=======
 
 
 catPicByBreed()
@@ -159,4 +158,3 @@ compBtn.addEventListener('click', function() {
 homeMode.addEventListener('click', function() {
     window.location.href = "index.html"
 })
->>>>>>> dev
