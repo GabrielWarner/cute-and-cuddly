@@ -30,6 +30,13 @@ function renderCard(event){
     .then(function (data) {
       //clearing card each time it searches
       breedCard.innerHTML = ""
+      console.log(data)
+      if(data.length == 0){
+        var error = document.createElement("span")
+        error.textContent = "error: breed not found!"
+        breedCard.append(error)
+        
+      }
       console.log(data[0])
       //setting the breed code to pass into function that will retrieve other info about dog
       var breedCode = data[0].id
