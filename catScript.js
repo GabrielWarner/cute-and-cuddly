@@ -1,7 +1,8 @@
 var cat = document.getElementById('catImage')
 var dogMode = document.getElementById('catBtn')
 var dropdownEl = document.getElementById('dropdown1')
-
+var compBtn = document.getElementById('compareBtn')
+var homeMode = document.getElementById('homeBtn')
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
     'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
     'Bombay', 'British Longhair', 'British Shorthair', 'Burmese', 'Burmilla', 'California Spangled',
@@ -90,4 +91,12 @@ generateDropdown()
 
 dogMode.addEventListener('click', function() {
     window.location.href = "doghtml.html"
+})
+
+compBtn.addEventListener('click', function() {
+    window.location.href = 'compare.html'
+  })
+
+homeMode.addEventListener('click', function() {
+    window.location.href = "index.html"
 })

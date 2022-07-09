@@ -1,0 +1,18 @@
+body {
+    background-color: red !important;
+}
+
+.card {
+    width: 50%;
+    float: left;
+}
+
+.card-content{
+    text-align: center;
+    font-weight: bold;
+    }
+
+.card img {
+max-width: 100%;
+width:100%
+}

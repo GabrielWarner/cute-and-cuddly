@@ -1,4 +1,12 @@
 
+var dogBtn = document.getElementById('dogBtn')
+var mainEl = document.getElementById('id')
+
+var catMode = document.getElementById('dogBtn')
+
+var homeMode = document.getElementById('homeBtn')
+var compBtn = document.getElementById('compareBtn')
+
 var search = document.getElementById('search-input')
 var breedCardForm = document.getElementById('breed-card-form')
 var mainEl = document.getElementById('main')
@@ -22,7 +30,9 @@ function renderCard(event){
     .then(function (data) {
       //clearing card each time it searches
       breedCard.innerHTML = ""
-      console.log(data)
+      console.log(data[0])
+      //setting the breed code to pass into function that will retrieve other info about dog
+      var breedCode = data[0].id
       //creating div that will hold the image and secondary div that will hold the information
       var div = document.createElement('div')
       //creating to divs
@@ -56,7 +66,6 @@ function renderCard(event){
           .then(function (data) {
             //grabbing image url and storing it in variable
             imgURL = data.url
-            console.log(data)
             //creating image element so i can then set its src attribute to the URL i just made
             var image = document.createElement("img")
             image.setAttribute("src", imgURL)
@@ -71,8 +80,47 @@ function renderCard(event){
           });
       }
       renderimage(data)
+
+      //pass breed code into renderInfo function which builds search url off breed code and fethces the info
+      renderInfo(breedCode)
+      
     });
 }
 
+function renderInfo(breedCode){
+  console.log(breedCode)
+  //use breed code to create URL
+  var secondUrl = "https://api.ThecatAPI.com/v1/images/search?breed_ids=beng&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854"
+
+  function getApi(secondUrl) {
+    fetch(secondUrl)
+      .then(function (response) {
+        return response.json();
+    })
+    .then(function(data){
+      console.log(data)
+    });
+  }
+  getApi(secondUrl)
+
+}
+
+
+
+catMode.addEventListener('click', function() {
+  window.location.href = "cat.html"
+})
 
 breedCardForm.addEventListener('submit', renderCard)
+
+dogBtn.addEventListener('click', function() {
+  window.location.href = "cat.html"
+})
+
+compBtn.addEventListener('click', function() {
+  window.location.href = 'compare.html'
+})
+
+homeMode.addEventListener('click', function() {
+  window.location.href = "index.html"
+})
