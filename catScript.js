@@ -90,7 +90,7 @@ function breedIdByName(breed) {
 
 catPicByBreed()
 getCatBreed()
-generateDropdown()
+// generateDropdown()
 breedIdByName("bengal")
 
 
