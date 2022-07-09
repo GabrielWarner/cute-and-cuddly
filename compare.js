@@ -8,6 +8,7 @@ var catsName = document.getElementById("catNameApi");
 var catsLife = document.getElementById("catLifeApi");
 var catsInfo = document.getElementById("catInfoApi");
 var homeMode = document.getElementById('homeBtn');
+var playMode = document.getElementById('playBtn');
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
     'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
     'Bombay', 'British Longhair', 'British Shorthair', 'Burmese', 'Burmilla', 'California Spangled',
@@ -65,7 +66,9 @@ function rndmDog(){
 function rndmCat() {
   var rndmsomthng = getRandomInt(1, 67)
   var requestUrl =
-    "https://api.thecatapi.com/v1/images/search?breeds_id="+breedArr[rndmsomthng]+"&api_key=f0f11a12-d477-4d44-ae91-5f773cb8183f";
+    "https://api.thecatapi.com/v1/images/search?q="+breedArr[rndmsomthng]+"&api_key=f0f11a12-d477-4d44-ae91-5f773cb8183f";
+  var requestURL2=
+  "https://api.thecatapi.com/v1/breeds/search?q="+breedArr[rndmsomthng]+"&api_key=f0f11a12-d477-4d44-ae91-5f773cb8183f";
 
   fetch(requestUrl)
     .then(function (res) {
@@ -98,5 +101,9 @@ rndmDog();
 
   homeMode.addEventListener('click', function() {
     window.location.href = "index.html"
+})
+
+playMode.addEventListener('click', function() {
+  window.location.href = "compare.html"
 })
 
