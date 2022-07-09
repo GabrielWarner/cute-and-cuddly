@@ -1,4 +1,7 @@
 
+var dogBtn = document.getElementById('dogBtn')
+var mainEl = document.getElementById('id')
+
 var search = document.getElementById('search-input')
 var breedCardForm = document.getElementById('breed-card-form')
 var mainEl = document.getElementById('main')
