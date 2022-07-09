@@ -30,7 +30,7 @@ dogBtn.addEventListener('click', function() {
     window.location.href = 'doghtml.html'
 })
 
-
+/*
 .dropbtn {
   background-color: #04AA6D;
   color: white;
@@ -68,4 +68,4 @@ dogBtn.addEventListener('click', function() {
 </style>
 
 
-
+*/

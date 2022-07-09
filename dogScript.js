@@ -1,4 +1,5 @@
 var dogBtn = document.getElementById('dogBtn')
+var mainEl = document.getElementById('id')
 
 function renderCard(){
 
