@@ -1,6 +1,7 @@
 var cat = document.getElementById('catImage')
 var dogMode = document.getElementById('catBtn')
 var dropdownEl = document.getElementById('dropdown1')
+var compBtn = document.getElementById('compareBtn')
 
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
     
@@ -51,3 +52,7 @@ generateDropdown()
 dogMode.addEventListener('click', function() {
     window.location.href = "doghtml.html"
 })
+
+compBtn.addEventListener('click', function() {
+    window.location.href = 'compare.html'
+  })
