@@ -17,16 +17,12 @@
         <!--container for buttons-->
         <div class="container row">
             <a class="waves-effect waves-light btn col m4" id="catBtn">Click for Dog Mode</a>
-            <form class="col m4 push-m2">
             <div class="row">
-                <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                </ul>
+                <form class="col m4 push-m2" id="breed-card-form">
+                    <label for="search-input" class="sr-only">Search by Breed</label>
+                    <input type="text" class="form-control" id="search-input" placeholder="Type breed">
+                </form>
             </div>
-            </form>
         </div>
         <!--container for cat api and info-->
         <div class="container row">
