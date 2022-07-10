@@ -129,8 +129,12 @@ function storeVar(value){
   cutePet.innerHTML = value;
   let amount = value;
   console.log(amount)
+<<<<<<< HEAD
+  picCompare.classList.add('stopCursor')}
+=======
+>>>>>>> dev
 
-  buttonEl.classList.add("stopCursor")}
+  buttonEl.classList.add("stopCursor")
 
 
 
