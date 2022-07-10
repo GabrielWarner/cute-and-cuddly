@@ -123,9 +123,12 @@ rndmCat();
 rndmDog();
 
 function storeVar(value){
+  var buttonEl = document.getElementById("catFav");
+  var cutePet = document.getElementById("cutestPet");
+  cutePet.innerHTML = value;
   let amount = value;
   console.log(amount)
-}
+  buttonEl.classlist.add("stopCursor")}
 
 
   homeMode.addEventListener('click', function() {
