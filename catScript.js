@@ -150,11 +150,13 @@ inputEl.addEventListener('submit', makeCatImage)
 //     //     if (breed === )
 //     // }
 
+
 // catPicByBreed()
 // getCatBreed()
 // generateDropdown()
 // breedIdByName("bengal")
     // }
+
 
 
 // catPicByBreed()
@@ -172,6 +174,12 @@ inputEl.addEventListener('submit', makeCatImage)
 //     window.location.href = 'compare.html'
 //   })
 
+
+homeMode.addEventListener('click', function() {
+    window.location.href = "index.html"
+})
+
 // homeMode.addEventListener('click', function() {
 //     window.location.href = "index.html"
 // })
+
