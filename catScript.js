@@ -24,13 +24,23 @@ console.log()
 var breedId = []
 var userSearch = 'beng'
 
-for (var i = 0; i < breedArr.length; i++) {
-    var newId = breedArr[i].substring(0, 4)
-    breedId.push(newId)
+function getBreedId() {
+    fetch(catBreed)
+        .then((response) => response.json())
+        .then((data) => {
+            for (var i = 0; i < breedArr.length; i++) {
+            var newId = data[i].id
+            breedId.push(newId)
+        }
+        console.log(breedId)
+    })
+    
+    
 }
 
 var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='
 var catBreed = 'https://api.thecatapi.com/v1/breeds'
+var apiKey = '&api_key=f0f11a12-d477-4d44-ae91-5f773cb8183f'
 
 
 function makeCatImage(event) {
@@ -50,7 +60,8 @@ function makeCatImage(event) {
     
     fetch(catUrl+id)
     .then((response) => response.json())
-    .then((data) => {
+    .then((data) => { 
+        console.log(data)
         var catPic = document.createElement('img')
         catPic.setAttribute('src', data[0].url)
         catPic.setAttribute('class', 'col m8')
@@ -58,21 +69,56 @@ function makeCatImage(event) {
         
     })
     console.log(breed)
-    makeCatData(breed)
+    makeCatDataCard(breed)
 }
 
-function makeCatData(breed) {
+function makeCatDataCard(breed) {
+    catFact.innerHTML = ""
     fetch(catBreed)
     .then((response) => response.json())
     .then((data) => {
-        console.log(data[0].description)
+        console.log(data)
         for (var i = 0; i < data.length; i++) {
             if (data[i].name === breed) {
-                catFact.textContent = data[i].description
+
+                var divContainer = document.createElement('div')
+                var cardHeader = document.createElement('h2')
+                var divCardType = document.createElement('div')
+                var divStacked = document.createElement('div')
+                var divContent = document.createElement('div')
+                var descHead = document.createElement('h3')
+                var descText = document.createElement('p')
+                var temperament = document.createElement('h3')
+                var tempText = document.createElement('p')
+
+                divContainer.setAttribute('class', "col s12 m7")
+                cardHeader.setAttribute('class', 'header')
+                divCardType.setAttribute('class', 'card horizontal')
+                divStacked.setAttribute('class', 'card-stacked')
+                divContent.setAttribute('class', 'card-content')
+
+                cardHeader.innerHTML = data[i].name
+                descHead.innerHTML = "Description:"
+                descText.innerHTML = data[i].description
+                temperament.innerHTML = "Temperament"
+                tempText.innerHTML = data[i].temperament
+
+                divContent.append(descHead)
+                divContent.append(descText)
+                divContent.append(temperament)
+                divContent.append(tempText)
+                divStacked.append(divContent)
+                divCardType.append(divStacked)
+                divContainer.append(cardHeader)
+                divContainer.append(divCardType)
+                catFact.append(divContainer)
+
             }
         }
     })
 }
+
+getBreedId()
 
 dogMode.addEventListener('click', function() {
     window.location.href = "doghtml.html"
