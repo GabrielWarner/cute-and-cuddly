@@ -132,13 +132,6 @@ inputEl.addEventListener('submit', makeCatCard)
 //     //     if (breed === )
 //     // }
 
-<<<<<<< HEAD
-// catPicByBreed()
-// getCatBreed()
-// generateDropdown()
-// breedIdByName("bengal")
-    // }
-=======
 
 
 catPicByBreed()
@@ -159,4 +152,3 @@ compBtn.addEventListener('click', function() {
 homeMode.addEventListener('click', function() {
     window.location.href = "index.html"
 })
->>>>>>> dev
