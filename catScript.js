@@ -151,12 +151,17 @@ inputEl.addEventListener('submit', makeCatImage)
 //     // }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> a8c47bd563586d67865ccc00f0a18a8431867600
 // catPicByBreed()
 // getCatBreed()
 // generateDropdown()
 // breedIdByName("bengal")
     // }
+<<<<<<< HEAD
 >>>>>>> 83c041724a18791f71d74324f8f651fced383a7d
 
 
@@ -174,13 +179,41 @@ inputEl.addEventListener('submit', makeCatImage)
 // compBtn.addEventListener('click', function() {
 //     window.location.href = 'compare.html'
 //   })
+=======
+
+
+
+// catPicByBreed()
+// getCatBreed()
+// // generateDropdown()
+// breedIdByName("bengal")
+
+
+
+// dogMode.addEventListener('click', function() {
+//     window.location.href = "doghtml.html"
+// })
+
+// compBtn.addEventListener('click', function() {
+//     window.location.href = 'compare.html'
+//   })
+
+>>>>>>> a8c47bd563586d67865ccc00f0a18a8431867600
 
 <<<<<<< HEAD
 homeMode.addEventListener('click', function() {
     window.location.href = "index.html"
 })
+<<<<<<< HEAD
 =======
 // homeMode.addEventListener('click', function() {
 //     window.location.href = "index.html"
 // })
 >>>>>>> 83c041724a18791f71d74324f8f651fced383a7d
+=======
+
+// homeMode.addEventListener('click', function() {
+//     window.location.href = "index.html"
+// })
+
+>>>>>>> a8c47bd563586d67865ccc00f0a18a8431867600
