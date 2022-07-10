@@ -125,7 +125,7 @@ rndmDog();
 function storeVar(value){
   let amount = value;
   console.log(amount)
-}
+  picCompare.classlist.add('stopCursor')}
 
 
   homeMode.addEventListener('click', function() {
