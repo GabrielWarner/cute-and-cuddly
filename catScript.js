@@ -120,6 +120,7 @@ function makeCatDataCard(breed) {
 
 getBreedId()
 
+
 dogMode.addEventListener('click', function() {
     window.location.href = "doghtml.html"
 })
