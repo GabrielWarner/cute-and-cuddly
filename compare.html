@@ -13,18 +13,20 @@
         <div class="row" id="headInfo">
             <div class=" col s12">
                 <h1>WHICH PET IS THE CUTEST</h1>
-                <h3>Please click on the "whatever we choose" you think is the cutest</h3>
+                <h3 id="cutestPet">Please click on the "whatever we choose" you think is the cutest</h3>
             </div>    
         </div>
 
-        <div class ="row green lighten-3" id="picCompare">
+        <div id ="picCompare" class ="row green lighten-3">
             
             <div class="col s12 cards-container">
                 <div class="cat card blue-grey darken-1">
                     <div class="card-image-1">
                         <img id ="catImage" src="https://i.pinimg.com/originals/83/01/aa/8301aa7d789494566ea9ea1e229c5a36.jpg">
                         <span class="flow-text white-text Cat-Picture">Is this Cat the Cutest? Click the button to cast your vote!</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light blue" id="catFav"><i class="material-icons"  onclick='storeVar("You picked the cat to be cutest")'>add</i></a>
+
+                        <a id="catFav"class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons"  onclick='storeVar("You picked the cat to be cutest")'>add</i></a>
+
                     </div>
                     <div class="card-content white-text">
                         <h3 id ="catNameApi"></h3>
@@ -37,7 +39,9 @@
                     <div class="card-image-2">
                         <img id ="dogImage" src="http://cdn.akc.org/content/article-body-image/lab_puppy_dog_pictures.jpg">
                         <span class="flow-text white-text Dog-Picture">Is this Dog the Cutest? Click the button to cast your vote!</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light blue" id="dogFav"><i class="material-icons"  onclick='storeVar("You picked the dog to be the cutest")'>add</i></a>
+
+                        <a id="dogFav" class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons"  onclick='storeVar("You picked the dog to be the cutest")'>add</i></a>
+
                     </div>
                     <div class="card-content white-text">
                         <h3 id="dogNameApi"></p>
