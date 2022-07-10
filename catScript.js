@@ -1,5 +1,4 @@
 var cat = document.getElementById('catImage')
-var catFact = document.getElementById('catFact')
 var dogMode = document.getElementById('catBtn')
 var dropdownEl = document.getElementById('dropdown1')
 var compBtn = document.getElementById('compareBtn')
@@ -33,17 +32,15 @@ var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='
 var catBreed = 'https://api.thecatapi.com/v1/breeds'
 
 
-function makeCatImage(event) {
+function makeCatCard(event) {
     event.preventDefault()
     console.log('hi')
-    cat.innerHTML = ""
     var breed = searchInput.value.trim().toLowerCase()
     var id = ""
     console.log(breed)
     for (var i = 0; i < breedArr.length; i++) {
         if (breedArr[i].toLowerCase() === breed) {
             id = breedId[i]
-            breed = breedArr[i]
         }
     }
     console.log(id)
@@ -55,24 +52,9 @@ function makeCatImage(event) {
         catPic.setAttribute('src', data[0].url)
         catPic.setAttribute('class', 'col m8')
         cat.append(catPic)
-        
     })
-    console.log(breed)
-    makeCatData(breed)
 }
 
-function makeCatData(breed) {
-    fetch(catBreed)
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data[0].description)
-        for (var i = 0; i < data.length; i++) {
-            if (data[i].name === breed) {
-                catFact.textContent = data[i].description
-            }
-        }
-    })
-}
 
 dogMode.addEventListener('click', function() {
     window.location.href = "doghtml.html"
@@ -86,7 +68,7 @@ homeMode.addEventListener('click', function() {
     window.location.href = "index.html"
 })
 
-inputEl.addEventListener('submit', makeCatImage)
+inputEl.addEventListener('submit', makeCatCard)
 
 // THIS WAS ALL ORIGINAL TESTING THAT WE USED TO LEARN ABOUT API
 // $('.dropdown-trigger').dropdown();
