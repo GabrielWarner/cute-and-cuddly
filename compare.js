@@ -129,7 +129,9 @@ function storeVar(value){
   cutePet.innerHTML = value;
   let amount = value;
   console.log(amount)
+
   buttonEl.classList.add("stopCursor")}
+
 
 
   homeMode.addEventListener('click', function() {
