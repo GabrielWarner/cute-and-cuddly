@@ -151,11 +151,6 @@ inputEl.addEventListener('submit', makeCatImage)
 //     // }
 
 
-// catPicByBreed()
-// getCatBreed()
-// generateDropdown()
-// breedIdByName("bengal")
-    // }
 
 
 
@@ -175,11 +170,20 @@ inputEl.addEventListener('submit', makeCatImage)
 //   })
 
 
-homeMode.addEventListener('click', function() {
-    window.location.href = "index.html"
-})
 
-// homeMode.addEventListener('click', function() {
-//     window.location.href = "index.html"
+
+// catPicByBreed()
+// getCatBreed()
+// // generateDropdown()
+// breedIdByName("bengal")
+
+
+
+// dogMode.addEventListener('click', function() {
+//     window.location.href = "doghtml.html"
 // })
+
+// compBtn.addEventListener('click', function() {
+//     window.location.href = 'compare.html'
+//   })
 
