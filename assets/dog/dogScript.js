@@ -46,8 +46,15 @@ function renderCard(event) {
       var divLeft = document.createElement("div");
       var divRight = document.createElement("div");
       var cardTitle = document.createElement("h3");
+      var infoCard = document.createElement("div");
+      var cardContent = document.createElement("div");
       //creating elements for info
-      var name = document.createElement("p");
+      var weightHeader = document.createElement("h3")
+      var heightHeader = document.createElement("h3")
+      var bredForHeader = document.createElement("h3")
+      var breedGroupHeader = document.createElement("h3")
+      var temperamentHeader = document.createElement("h3")
+
       var weight = document.createElement("p");
       var height = document.createElement("p");
       var bredFor = document.createElement("p");
@@ -55,27 +62,76 @@ function renderCard(event) {
       var temperament = document.createElement("p");
 
       //style
-      divLeft.setAttribute("class", "left col s6");
-      divRight.setAttribute("class", "right col s6");
       div.setAttribute("class", "row");
-      cardTitle.setAttribute("class", "col s12");
+      divLeft.setAttribute("class", "left col s6");
+      divRight.setAttribute("class", "row col s6");
+
+      weightHeader.textContent = "Weight: "
+      weightHeader.setAttribute("class", "col s12")
+
+      heightHeader.textContent = "Height: "
+      heightHeader.setAttribute("class", "col s12")
+      
+      bredForHeader.textContent = "Bred For: "
+      bredForHeader.setAttribute("class", "col s12")
+
+      breedGroupHeader.textContent = "Breed Group: "
+      breedGroupHeader.setAttribute("class", "col s12")
+
+      temperamentHeader.textContent = "Temperament: "
+      temperamentHeader.setAttribute("class", "col s12")
+
+
+
+      
+    infoCard.setAttribute("class", "card horizontal col s12")
+    cardContent.setAttribute("class", "card-content")
+      
       cardTitle.textContent = data[0].name;
-      name.textContent = "Breed: " + data[0].name;
-      weight.textContent = "Weight: " + data[0].weight.imperial;
-      height.textContent = "Height: " + data[0].height.imperial;
-      bredFor.textContent = "Bred For: " + data[0].bred_for;
-      breedGroup.textContent = "Breed Group: " + data[0].breed_group;
-      temperament.textContent = "Temperament: " + data[0].temperament;
+      weight.textContent = data[0].weight.imperial; + " lbs"
+      height.textContent = data[0].height.imperial; + " inches"
+      bredFor.textContent = data[0].bred_for;
+      breedGroup.textContent = data[0].breed_group;
+      temperament.textContent = data[0].temperament;
+
+
+      
+      
+      weight.setAttribute("class", "col s12")
+      bredFor.setAttribute("class", "col s12")
+      breedGroup.setAttribute("class", "col s12")
+      temperament.setAttribute("class", "col s12")
       //appending
-      div.append(cardTitle);
+      
+      divRight.append(cardTitle)
+      cardContent.append(weightHeader)
+      cardContent.append(weight);
+      cardContent.append(heightHeader)
+      cardContent.append(height)
+      cardContent.append(bredForHeader)
+      cardContent.append(bredFor);
+      cardContent.append(breedGroup)
+      cardContent.append(breedGroup);
+      cardContent.append(temperamentHeader)
+      cardContent.append(temperament);
+
+
+      infoCard.append(cardContent)
+      divRight.append(infoCard)
+
+
       breedCard.append(div);
       breedCard.append(divLeft);
       breedCard.append(divRight);
-      divRight.append(name);
-      divRight.append(weight);
-      divRight.append(bredFor);
-      divRight.append(breedGroup);
-      divRight.append(temperament);
+      
+
+
+
+
+
+      
+
+
       //grab image id and then fetch image
       function renderimage(data) {
         //with data passed in I am now grabbing the image ID and storing it in a variable and then building the new request url based off it
@@ -141,7 +197,7 @@ function renderInfo(breedCode) {
 }
 
 catMode.addEventListener("click", function () {
-  window.location.href = "cat.html";
+  window.location.href = "../cat.html";
 });
 
 breedCardForm.addEventListener("submit", renderCard);
