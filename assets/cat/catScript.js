@@ -7,6 +7,7 @@ var homeMode = document.getElementById('homeBtn')
 var inputEl = document.getElementById('breed-card-form')
 var searchInput = document.getElementById('search-input')
 var modalList = document.getElementById('modalList')
+var outColor = document.getElementById('outsideColor')
 
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
 'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
@@ -89,6 +90,7 @@ function makeCatImage(event) {
         var instances = M.Materialbox.init(elems);
     })
     console.log(breed)
+
     makeCatDataCard(breed)
 }
 
@@ -118,6 +120,7 @@ function makeCatDataCard(breed) {
                 divContainer.setAttribute('class', "col s12 m12 l12")
                 cardHeader.setAttribute('class', 'header')
                 divCardType.setAttribute('class', 'card horizontal')
+                divCardType.setAttribute('id', 'card')
                 divStacked.setAttribute('class', 'card-stacked')
                 divContent.setAttribute('class', 'card-content left-align')
 
@@ -145,7 +148,8 @@ function makeCatDataCard(breed) {
                 divContainer.append(cardHeader)
                 divContainer.append(divCardType)
                 catFact.append(divContainer)
-
+                
+                outColor.setAttribute('class', 'green lighten-3 container')
             }
         }
     })
