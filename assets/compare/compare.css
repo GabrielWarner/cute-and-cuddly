@@ -1,0 +1,35 @@
+body {
+    background-color: red !important;
+}
+
+.card {
+    width: 50%;
+    float: left;
+}
+
+.card-content{
+    text-align: center;
+    font-weight: bold;
+    }
+
+.card img {
+max-width: 100%;
+width:100%
+}
+
+.stopCursor {
+    cursor: progress !important;
+    pointer-events: none;
+}
+
+h1 {
+text-align: center;
+}
+
+#cutestPet {
+    text-align: center;
+}
+
+.buttonSize {
+    width:100%
+}
