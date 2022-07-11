@@ -20,7 +20,6 @@ var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'Am
     'Russian Blue', 'Savannah', 'Scottish Fold', 'Selkirk Rex', 'Siamese', 'Siberian', 'Singapura',
     'Snowshoe', 'Somali', 'Sphynx', 'Tonkinese', 'Toyger', 'Turkish Angora', 'Turkish Van', 'York Chocolate'
 ];
-var dogArrWorking = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","28","29","30","31","32","33","34","36","38","41","42","43","45","47","48","51","52","53","54","55","56","57","58","59","61","67","68","69","70","71","76","78","79","80","81","201"]
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -30,7 +29,7 @@ function getRandomInt(min, max) {
 }
 
 function rndmDog(){ 
-  var rndmsomthng = getRandomInt(0, 61)
+  var rndmsomthng = getRandomInt(0, 19)
   var requestUrl =
     "https://api.thedogapi.com/v1/images/search?breeds_id="+rndmsomthng+"&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854";
 
@@ -42,9 +41,17 @@ function rndmDog(){
     .then(function (data) {
       console.log("dog",data); // test
 
+     /* if data.breeds === undefined
+      then dogsImage = http://cdn.akc.org/content/article-body-image/lab_puppy_dog_pictures.jpg
+      dogsName="Black Lab Puppy"
+      dogslife="lifespan: 10-12 years on average"
+      dogsInfo="Average Temperament: All black Labs are typically active, friendly and loyal. They bond strongly with their family, but usually love meeting new people too"
+
+      */
       var newDiv = document.createElement("div");
       newDiv.textContent = data[0].breeds[0].name;
       dogsName.append(newDiv);
+
 
       var newDiv2 = document.createElement("div");
       newDiv2.textContent = data[0].breeds[0].life_span;
@@ -55,6 +62,7 @@ function rndmDog(){
       dogsInfo.append(newDiv3);
 
       dogsImage.setAttribute("src", data[0].url)
+    
 
       //if breeds.length = 0 then these values display sometthing "not found"
       // else proceed 
