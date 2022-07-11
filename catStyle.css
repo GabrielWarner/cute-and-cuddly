@@ -12,3 +12,44 @@ main {
     text-align: center;
 }
 
+.container {
+    width: 85%;
+}
+
+#dataContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#searchContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bottomBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#catBtn {
+    margin: 5px;
+}
+
+#breed-card-form {
+    margin: 5px;
+}
+
+#modal {
+    margin: 5px;
+}
+
+#homeBtn {
+    margin: 5px;
+}
+
+#compareBtn {
+    margin: 5px;
+}
