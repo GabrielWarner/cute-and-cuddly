@@ -170,6 +170,7 @@ function rndmCat() {
 
           var newDiv2 = document.createElement("div");
 
+
           var years = " years on average";
           newDiv2.textContent = data[0].life_span + years;
 
