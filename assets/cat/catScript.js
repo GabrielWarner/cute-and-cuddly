@@ -47,7 +47,6 @@ function getBreedId() {
 
 function loadRand() {
     searchInput.value = breedArr[randBreed]
-    makeCatImage
 }
 
 var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='
@@ -84,9 +83,10 @@ function makeCatImage(event) {
         console.log(data)
         var catPic = document.createElement('img')
         catPic.setAttribute('src', data[0].url)
-        catPic.setAttribute('class', 'col m8')
+        catPic.setAttribute('class', 'col s8 m8 materialboxed')
         cat.append(catPic)
-        
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems);
     })
     console.log(breed)
     makeCatDataCard(breed)
@@ -111,7 +111,7 @@ function makeCatDataCard(breed) {
                 var temperament = document.createElement('h3')
                 var tempText = document.createElement('p')
 
-                divContainer.setAttribute('class', "col s12 m7")
+                divContainer.setAttribute('class', "col s12 m12 l12")
                 cardHeader.setAttribute('class', 'header')
                 divCardType.setAttribute('class', 'card horizontal')
                 divStacked.setAttribute('class', 'card-stacked')

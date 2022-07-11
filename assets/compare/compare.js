@@ -105,7 +105,7 @@ function rndmDog() {
         dogsName.append(newDiv);
 
         var newDiv2 = document.createElement("div");
-        newDiv2.textContent = data[0].breeds[0].life_span;
+        newDiv2.textContent = data[0].breeds[0].life_span + " years on average";;
         dogsLife.append(newDiv2);
 
         var newDiv3 = document.createElement("div");
@@ -169,7 +169,11 @@ function rndmCat() {
           catsName.append(newDiv);
 
           var newDiv2 = document.createElement("div");
-          newDiv2.textContent = data[0].life_span;
+
+
+          var years = " years on average";
+          newDiv2.textContent = data[0].life_span + years;
+
           catsLife.append(newDiv2);
 
           var newDiv3 = document.createElement("div");
