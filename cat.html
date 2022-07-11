@@ -18,10 +18,25 @@
         <div class="container row">
             <a class="waves-effect waves-light btn col m4" id="catBtn">Click for Dog Mode</a>
             <div class="row">
-                <form class="col m4 push-m2" id="breed-card-form">
+                <form class="col m4 push-m1" id="breed-card-form">
                     <label for="search-input" class="sr-only">Search by Breed</label>
                     <input type="text" class="form-control" id="search-input" placeholder="Type breed">
                 </form>
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Breed List</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Breed List</h4>
+                        <ul id="modalList">
+                            
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
+                </div>
             </div>
         </div>
         <!--container for cat api and info-->
@@ -37,8 +52,8 @@
         <a class="waves-effect waves-light btn col m4" id="compareBtn">Which Pet is Cuter?</a>
         <a class="waves-effect waves-light btn col m4" id="homeBtn">Home</a>
     </main>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./catScript.js"></script>
 </body>
 </html>

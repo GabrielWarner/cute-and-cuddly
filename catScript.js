@@ -6,6 +6,7 @@ var compBtn = document.getElementById('compareBtn')
 var homeMode = document.getElementById('homeBtn')
 var inputEl = document.getElementById('breed-card-form')
 var searchInput = document.getElementById('search-input')
+var modalList = document.getElementById('modalList')
 
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
 'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
@@ -19,10 +20,16 @@ var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'Am
 'Snowshoe', 'Somali', 'Sphynx', 'Tonkinese', 'Toyger', 'Turkish Angora', 'Turkish Van', 'York Chocolate'
 ]
 
-var randomCatBreedLength = Math.floor(Math.random() * breedArr.length)
-console.log()
+var randBreed = Math.floor(Math.random() * breedArr.length)
+console.log(randBreed)
 var breedId = []
 var userSearch = 'beng'
+
+for (var i = 0; i < breedArr.length; i++) {
+    var breedLi = document.createElement('li')
+    breedLi.innerHTML = breedArr[i]
+    modalList.append(breedLi)
+}
 
 function getBreedId() {
     fetch(catBreed)
@@ -38,6 +45,11 @@ function getBreedId() {
     
 }
 
+function loadRand() {
+    searchInput.value = breedArr[randBreed]
+    makeCatImage
+}
+
 var catUrl = 'https://api.thecatapi.com/v1/images/search?breed_ids='
 var catBreed = 'https://api.thecatapi.com/v1/breeds'
 var apiKey = '&api_key=f0f11a12-d477-4d44-ae91-5f773cb8183f'
@@ -48,19 +60,27 @@ function makeCatImage(event) {
     console.log('hi')
     cat.innerHTML = ""
     var breed = searchInput.value.trim().toLowerCase()
+    searchInput.value = ""
     var id = ""
     console.log(breed)
     for (var i = 0; i < breedArr.length; i++) {
         if (breedArr[i].toLowerCase() === breed) {
             id = breedId[i]
             breed = breedArr[i]
+            searchInput.setAttribute('placeholder', "Type breed")
         }
     }
     console.log(id)
     
+    if (id === "") {
+    searchInput.setAttribute('placeholder', "Not a breed: click button for list -->")
+    catFact.innerHTML = ""
+    return
+    }
+    
     fetch(catUrl+id)
     .then((response) => response.json())
-    .then((data) => { 
+    .then((data) => {
         console.log(data)
         var catPic = document.createElement('img')
         catPic.setAttribute('src', data[0].url)
@@ -119,7 +139,11 @@ function makeCatDataCard(breed) {
 }
 
 getBreedId()
+loadRand()
 
+$(document).ready(function(){
+    $('.modal').modal();
+});
 
 dogMode.addEventListener('click', function() {
     window.location.href = "doghtml.html"
