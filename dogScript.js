@@ -20,6 +20,8 @@ function renderCard(event) {
   var breed = search.value.trim();
   search.value = ""
 
+  
+
   //building request url with endpoint and user input along with api key
   var requestUrl = 'https://api.thedogapi.com/v1/breeds/search?q=' + breed + '&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854';
 
