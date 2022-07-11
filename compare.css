@@ -21,3 +21,15 @@ width:100%
     cursor: progress !important;
     pointer-events: none;
 }
+
+h1 {
+text-align: center;
+}
+
+#cutestPet {
+    text-align: center;
+}
+
+.buttonSize {
+    width:100%
+}
