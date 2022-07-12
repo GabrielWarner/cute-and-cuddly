@@ -1,16 +1,20 @@
+/*taking margins and padding away from whole page*/
 * {
     margin: 0;
     padding: 0;
 }
 
+/*align header to center*/
 h1 {
     text-align: center;
 }
 
+/*align main to center*/
 main {
     text-align: center;
 }
 
+/*style for bio card header*/
 h2 {
     font-size: 30px;
     font-weight: bold;
@@ -18,6 +22,7 @@ h2 {
     margin: 2px;
 }
 
+/*style for indv bio sections*/
 h3 {
     font-size: 20px;
     font-weight: bold;
@@ -25,67 +30,81 @@ h3 {
     margin: 2px 0 0 0;
 }
 
+/*style for indv bio card stats*/
 p {
     margin: 0px 0 2px 0;
 }
 
+/*setting any container to 85% width of parent*/
 .container {
     width: 85%;
 }
 
+/*centering the loaded cat image and data on the page with space around wach item*/
 #dataContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/*centering the top nav buttons/search centered on the page with space around wach item*/
 #searchContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/*centering the bottom nav buttons/search centered on the page with space around wach item*/
 #bottomBtns {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*spcaing out indv items with margins*/
 #catImage {
     margin-top: 10px;
 }
 
+/*spcaing out indv items with margins*/
 #catFact {
     margin-top: 10px;
 }
 
+/*spcaing out indv items with margins*/
 #catBtn {
     margin: 5px;
 }
 
+/*spcaing out indv items with margins*/
 #breed-card-form {
     margin: 5px;
 }
 
+/*spcaing out indv items with margins*/
 #modal {
     margin: 5px;
 }
 
+/*spcaing out indv items with margins*/
 #homeBtn {
     
     margin: 5px;
 }
 
+/*spcaing out indv items with margins*/
 #compareBtn {
     margin: 5px;
 }
 
+/*styling the catFact data that we get from the api*/
 #card {
     border-radius: 5px;
     border: 2px solid #0e1c5a;
     background-color: #82b1ff;
 }
 
+/*giving rounded edges to backgroud green color*/
 #outsideColor {
     border-radius: 10px;
 }
