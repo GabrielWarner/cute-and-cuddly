@@ -77,8 +77,8 @@ function renderCard(event) {
 
       //style
       div.setAttribute("class", "row");
-      divLeft.setAttribute("class", "left col s6");
-      divRight.setAttribute("class", "row col s6");
+      divLeft.setAttribute("class", "left col s12 m6");
+      divRight.setAttribute("class", "row col s12 m6");
 
       weightHeader.textContent = "Weight: "
       weightHeader.setAttribute("class", "col s12")
@@ -145,8 +145,8 @@ function renderCard(event) {
       breedCard.append(buttonDiv)
 
       breedCard.setAttribute("class", "breed-card row green lighten-3")
-      divLeft.setAttribute("class", "left col s6 green lighten-3")
-      divRight.setAttribute("class", "right col s6 green lighten-3")
+      divLeft.setAttribute("class", "left col s12 m10 l6 green lighten-3")
+      divRight.setAttribute("class", "right col s12 m10 l6 green lighten-3")
 
 
 
