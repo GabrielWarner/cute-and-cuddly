@@ -45,7 +45,7 @@ function renderCard(event) {
       //creating two divs, left is to hold the image, right is to hold the info
       var divLeft = document.createElement("div");
       var divRight = document.createElement("div");
-      var cardTitle = document.createElement("h3");
+      var cardTitle = document.createElement("h2");
       var infoCard = document.createElement("div");
       var cardContent = document.createElement("div");
       //creating elements for info
@@ -88,6 +88,7 @@ function renderCard(event) {
     cardContent.setAttribute("class", "card-content")
       
       cardTitle.textContent = data[0].name;
+      cardTitle.setAttribute("class", "green lighten-3")
       weight.textContent = data[0].weight.imperial; + " lbs"
       height.textContent = data[0].height.imperial; + " inches"
       bredFor.textContent = data[0].bred_for;
@@ -123,7 +124,9 @@ function renderCard(event) {
       breedCard.append(div);
       breedCard.append(divLeft);
       breedCard.append(divRight);
-      
+      breedCard.setAttribute("class", "row green lighten-3")
+      divLeft.setAttribute("class", "left col s6 green lighten-3")
+      divRight.setAttribute("class", "right col s6 green lighten-3")
 
 
 
@@ -149,7 +152,7 @@ function renderCard(event) {
             //creating image element so i can then set its src attribute to the URL i just made
             var image = document.createElement("img");
             image.setAttribute("src", imgURL);
-            image.setAttribute("class", "materialboxed col s12");
+            image.setAttribute("class", "materialboxed col s12 green lighten-3");
             //create div that sits inside of Breed Card and holds all of the do
             var innerCard = document.createElement("div");
             innerCard.setAttribute("class", "col s6");
@@ -197,7 +200,7 @@ function renderInfo(breedCode) {
 }
 
 catMode.addEventListener("click", function () {
-  window.location.href = "../cat.html";
+  window.location.href = "cat.html";
 });
 
 breedCardForm.addEventListener("submit", renderCard);

@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
+    background-color: #82b1ff;
 }
 
 h1 {
@@ -32,5 +32,9 @@ display: flex;
 }
 
 .card{
-    background-color: aquamarine;
+    background-color: #82b1ff;
+}
+
+.breed-card{
+    background-color: green lighten-3;
 }
