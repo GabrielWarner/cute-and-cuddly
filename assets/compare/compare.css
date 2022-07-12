@@ -27,6 +27,7 @@ body {
 .stopCursor {
     cursor: progress !important;
     pointer-events: none;
+    opacity: 0.5;
 }
 
 h1 {
