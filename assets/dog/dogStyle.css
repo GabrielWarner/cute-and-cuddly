@@ -61,15 +61,17 @@ display: flex;
     text-align: center;
     padding: 2em;
     margin-bottom: 0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .breed-card-form{
     margin-bottom: 0;
 }
 
 .dog-image{
+    text-align: center;
     padding: 1em;
     margin: 1em;
+    max-width: 80%;
 }
 #footer{
 z-index: 10;

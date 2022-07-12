@@ -166,7 +166,7 @@ function renderCard(event) {
             //creating image element so i can then set its src attribute to the URL i just made
             var image = document.createElement("img");
             image.setAttribute("src", imgURL);
-            image.setAttribute("class", "materialboxed col s12 green lighten-3 dog-image");
+            image.setAttribute("class", "materialboxed offset-s2 col s10 green lighten-3 dog-image");
 
             divLeft.append(image);
             
