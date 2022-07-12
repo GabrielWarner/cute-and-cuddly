@@ -71,8 +71,8 @@ function renderCard(event) {
       var buttonDiv = document.createElement("div")
       buttonDiv.setAttribute("class", "row col s12 green lighten-3 center-align")
 
-      homeMode.setAttribute("class", "waves-effect waves-light btn col s5 m3 l2")
-      compBtn.setAttribute("class", "waves-effect waves-light btn col s5 m3 l2")
+      homeMode.setAttribute("class", "waves-effect waves-light btn col s2")
+      compBtn.setAttribute("class", "waves-effect waves-light btn offset-s4 col s2")
 
 
       //style
