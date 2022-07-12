@@ -43,6 +43,7 @@ p {
 /*centering the loaded cat image and data on the page with space around wach item*/
 #dataContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
