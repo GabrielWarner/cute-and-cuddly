@@ -1,9 +1,9 @@
+ /* Simple reset for preset browser settingd  */
 * {
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
 }
-
+/* styling to center text and image */
 h1 {
     text-align: center;
 }
@@ -15,4 +15,13 @@ main {
 
 main a {
     margin: 5px;
+}
+
+h3 {
+    text-align: center;
+}
+img {
+    display: flex;
+    width: 80%;
+    margin: auto;
 }

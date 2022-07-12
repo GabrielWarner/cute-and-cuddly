@@ -7,7 +7,7 @@
     <title>FindAPet Homepage</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="./assets/index/style.css">
+    <link rel="stylesheet" href="./assets/dog/dogStyle.css">
 
 </head>
 <body>
@@ -15,38 +15,33 @@
         <h1>Welcome to Find-a-dog!</h1>
     </div>
 <!--Section with input for search-->
-<section id="for-search">
+<div class="container">
+    <section class="for-search row" id="for-search">
 
-    <a class="waves-effect waves-light btn col m4" id="dogBtn">Click for Cat Mode</a>
+        <form class="row" id="breed-card-form">
+            <a class="waves-effect waves-light btn col s12 m4 l3" id="dogBtn">Click for Cat Mode</a>
+            <input type="text" class="form-control col s12 m4 l3" id="search-input" placeholder="Type breed">
+            <button type="submit" class="waves-effect waves-light btn col s12 m4 l3">Search</button>
+        </form>
+        <div class="row breed-card" id="breed-card">
+        
 
+        </div>
+        <footer class="row" id="footer"> 
+            <a class="waves-effect waves-light btn offset-s4 col s2" id="compareBtn">Which Pet is Cuter?</a>
+            <a class="waves-effect waves-light btn col s2" id="homeBtn">Home</a>
+        </footer>
 
-    <form id="breed-card-form">
-        <label for="search-input" class="sr-only">Search by Breed</label>
-        <input type="text" class="form-control" id="search-input" placeholder="Type breed">
-        <button type="submit" class="waves-effect waves-light btn col m4">Search</button>
-    </form>
-    <div class="row" id="breed-card">
+    </section>
 
-    </div>
-    
-</section>
-<!--END search section-->
-<!--Section to display gifs for searched word-->
-<section class="layout">
-        <div id="result"></div>
-        <div id ="id"></div>
-        <div id="url"></div>
-        <div id ="image"></div>
-</section>
+</div>
 
-<a class="waves-effect waves-light btn col m4" id="compareBtn">Which Pet is Cuter?</a>
-<a class="waves-effect waves-light btn col m4" id="homeBtn">Home</a>
 
     </main>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/dog/dogScript.js"></script>
-
-
-
 </body>
 
