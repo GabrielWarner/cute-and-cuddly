@@ -145,8 +145,8 @@ function renderCard(event) {
       breedCard.append(buttonDiv)
 
       breedCard.setAttribute("class", "breed-card row green lighten-3")
-      divLeft.setAttribute("class", "left col s12 m6 green lighten-3")
-      divRight.setAttribute("class", "right col s12 m6 green lighten-3")
+      divLeft.setAttribute("class", "left col s12 m10 l6 green lighten-3")
+      divRight.setAttribute("class", "right col s12 m10 l6 green lighten-3")
 
 
 
