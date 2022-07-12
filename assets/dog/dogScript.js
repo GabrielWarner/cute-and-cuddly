@@ -71,8 +71,8 @@ function renderCard(event) {
       var buttonDiv = document.createElement("div")
       buttonDiv.setAttribute("class", "row col s12 green lighten-3 center-align")
 
-      homeMode.setAttribute("class", "waves-effect waves-light btn col s2")
-      compBtn.setAttribute("class", "waves-effect waves-light btn offset-s4 col s2")
+      homeMode.setAttribute("class", "waves-effect waves-light btn col s5 m3 l2")
+      compBtn.setAttribute("class", "waves-effect waves-light btn col s5 m3 l2")
 
 
       //style
@@ -145,8 +145,8 @@ function renderCard(event) {
       breedCard.append(buttonDiv)
 
       breedCard.setAttribute("class", "breed-card row green lighten-3")
-      divLeft.setAttribute("class", "left col s12 m6 green lighten-3")
-      divRight.setAttribute("class", "right col s12 m6 green lighten-3")
+      divLeft.setAttribute("class", "left col s12 m10 l6 green lighten-3")
+      divRight.setAttribute("class", "right col s12 m10 l6 green lighten-3")
 
 
 
