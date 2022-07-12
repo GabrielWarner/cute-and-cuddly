@@ -262,7 +262,7 @@ function storeVar(value) {
   this.addRemoveStop([document.getElementById("picCompare"), document.getElementById('btnCont')], true);
   setTimeout(() => {
     this.replay();
-  }, 5000);
+  }, 2000);
 }
 
 function addRemoveStop(elmnts, stop) {
