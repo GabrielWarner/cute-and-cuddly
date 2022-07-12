@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
 }
 
 h1 {
@@ -10,6 +9,24 @@ h1 {
 
 main {
     text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2px 0 0 0;
+}
+
+p {
+    margin: 0px 0 2px 0;
 }
 
 .container {
@@ -34,6 +51,14 @@ main {
     align-items: center;
 }
 
+#catImage {
+    margin-top: 10px;
+}
+
+#catFact {
+    margin-top: 10px;
+}
+
 #catBtn {
     margin: 5px;
 }
@@ -52,4 +77,14 @@ main {
 
 #compareBtn {
     margin: 5px;
+}
+
+#card {
+    border-radius: 5px;
+    border: 2px solid #0e1c5a;
+    background-color: #82b1ff;
+}
+
+#outsideColor {
+    border-radius: 10px;
 }

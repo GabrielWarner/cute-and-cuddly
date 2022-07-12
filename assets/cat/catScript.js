@@ -7,6 +7,7 @@ var homeMode = document.getElementById('homeBtn')
 var inputEl = document.getElementById('breed-card-form')
 var searchInput = document.getElementById('search-input')
 var modalList = document.getElementById('modalList')
+var outColor = document.getElementById('outsideColor')
 
 var breedArr = ['Abyssinian', 'Aegean', 'American Bobtail', 'American Curl', 'American Shorthair',
 'American Wirehair', 'Arabian Mau', 'Australian Mist', 'Balinese', 'Bambino', 'Bengal', 'Birman',
@@ -89,6 +90,7 @@ function makeCatImage(event) {
         var instances = M.Materialbox.init(elems);
     })
     console.log(breed)
+
     makeCatDataCard(breed)
 }
 
@@ -110,29 +112,44 @@ function makeCatDataCard(breed) {
                 var descText = document.createElement('p')
                 var temperament = document.createElement('h3')
                 var tempText = document.createElement('p')
+                var org = document.createElement('h3')
+                var orgText = document.createElement('p')
+                var weight = document.createElement('h3')
+                var weightText = document.createElement('p')
 
                 divContainer.setAttribute('class', "col s12 m12 l12")
                 cardHeader.setAttribute('class', 'header')
                 divCardType.setAttribute('class', 'card horizontal')
+                divCardType.setAttribute('id', 'card')
                 divStacked.setAttribute('class', 'card-stacked')
-                divContent.setAttribute('class', 'card-content')
+                divContent.setAttribute('class', 'card-content left-align')
 
                 cardHeader.innerHTML = data[i].name
                 descHead.innerHTML = "Description:"
                 descText.innerHTML = data[i].description
-                temperament.innerHTML = "Temperament"
+                temperament.innerHTML = "Temperament:"
                 tempText.innerHTML = data[i].temperament
+                org.innerHTML = "Origin:"
+                orgText.innerHTML = data[i].origin
+                weight.innerHTML = "Weight:"
+                weightText.innerHTML = data[i].weight.imperial + " pounds"
+
 
                 divContent.append(descHead)
                 divContent.append(descText)
                 divContent.append(temperament)
                 divContent.append(tempText)
+                divContent.append(org)
+                divContent.append(orgText)
+                divContent.append(weight)
+                divContent.append(weightText)
                 divStacked.append(divContent)
                 divCardType.append(divStacked)
                 divContainer.append(cardHeader)
                 divContainer.append(divCardType)
                 catFact.append(divContainer)
-
+                
+                outColor.setAttribute('class', 'green lighten-3 container')
             }
         }
     })
