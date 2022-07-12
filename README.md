@@ -20,3 +20,18 @@ https://github.com/GabrielWarner/project-one
 Deployed Link:
 
 https://gabrielwarner.github.io/project-one/index.html
+
+Screenshots:
+
+<img width="1285" alt="ss-home" src="https://user-images.githubusercontent.com/106774335/178576547-3e505826-76e5-4966-9bcd-88acce680f23.png">
+
+
+<img width="1279" alt="ss-dog" src="https://user-images.githubusercontent.com/106774335/178576520-30ce8d22-a617-4419-8180-7b3124ecb12d.png">
+
+
+<img width="1282" alt="ss-cat" src="https://user-images.githubusercontent.com/106774335/178576488-b4067de7-fa0a-4b3c-8bd0-6ade061657e8.png">
+
+
+<img width="1274" alt="ss-compare" src="https://user-images.githubusercontent.com/106774335/178576507-c1ed7b47-1f87-4b88-9537-dbfc4316c7a5.png">
+
+
