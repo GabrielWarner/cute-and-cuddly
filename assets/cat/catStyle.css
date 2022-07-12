@@ -84,6 +84,7 @@ p {
     border-radius: 5px;
     border: 2px solid #0e1c5a;
     background-color: #82b1ff;
+    box-shadow: 0 0 5px black;
 }
 
 #outsideColor {
