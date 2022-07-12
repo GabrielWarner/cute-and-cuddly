@@ -64,6 +64,7 @@ p {
 /*spcaing out indv items with margins*/
 #catImage {
     margin-top: 10px;
+    min-width: 200px;
 }
 
 /*spcaing out indv items with margins*/
