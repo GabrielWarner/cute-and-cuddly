@@ -15,39 +15,33 @@
         <h1>Welcome to Find-a-dog!</h1>
     </div>
 <!--Section with input for search-->
-<section id="for-search">
+<div class="container">
+    <section class="for-search row" id="for-search">
 
-    
+        <form class="row" id="breed-card-form">
+            <a class="waves-effect waves-light btn col s12 m4 l3" id="dogBtn">Click for Cat Mode</a>
+            <input type="text" class="form-control col s12 m4 l3" id="search-input" placeholder="Type breed">
+            <button type="submit" class="waves-effect waves-light btn col s12 m4 l3">Search</button>
+        </form>
+        <div class="row breed-card" id="breed-card">
+        
 
+        </div>
+        <footer class="row" id="footer"> 
+            <a class="waves-effect waves-light btn offset-s4 col s2" id="compareBtn">Which Pet is Cuter?</a>
+            <a class="waves-effect waves-light btn col s2" id="homeBtn">Home</a>
+        </footer>
 
+    </section>
 
-    <form class="row" id="breed-card-form">
-        <a class="waves-effect waves-light btn col m4" id="dogBtn">Click for Cat Mode</a>
-        <input type="text" class="form-control col s12 m4 l3" id="search-input" placeholder="Type breed">
-        <button type="submit" class="waves-effect waves-light btn col s12 m4 l3">Search</button>
-    </form>
-    <div class="row breed-card" id="breed-card">
+</div>
 
-    </div>
-    
-</section>
-<!--END search section-->
-<!--Section to display gifs for searched word-->
-<section class="layout">
-        <div id="result"></div>
-        <div id ="id"></div>
-        <div id="url"></div>
-        <div id ="image"></div>
-</section>
-
-<a class="waves-effect waves-light btn col m4" id="compareBtn">Which Pet is Cuter?</a>
-<a class="waves-effect waves-light btn col m4" id="homeBtn">Home</a>
 
     </main>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/dog/dogScript.js"></script>
-
-
-
 </body>
 
