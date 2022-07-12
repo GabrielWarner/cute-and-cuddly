@@ -34,9 +34,15 @@ function renderCard(event) {
       breedCard.innerHTML = "";
       console.log(data);
       if (data.length == 0) {
+        var errorDiv = document.createElement("div")
+        errorDiv.setAttribute("class", "error-div row green lighten-3")
         var error = document.createElement("span");
+        error.setAttribute("class", "col s12 error-text green lighten-3")
         error.textContent = "error: breed not found!";
-        breedCard.append(error);
+        errorDiv.append(error)
+        errorDiv.append(compBtn)
+        errorDiv.append(homeMode)
+        breedCard.append(errorDiv)
       }
       console.log(data[0]);
       //setting the breed code to pass into function that will retrieve other info about dog
@@ -93,7 +99,7 @@ function renderCard(event) {
 
       
     infoCard.setAttribute("class", "card horizontal col s12")
-    cardContent.setAttribute("class", "card-content")
+    cardContent.setAttribute("class", "card-content col s12")
       
       cardTitle.textContent = data[0].name;
       cardTitle.setAttribute("class", "green lighten-3")

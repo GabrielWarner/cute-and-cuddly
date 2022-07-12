@@ -79,3 +79,11 @@ z-index: 10;
 .for-search{
     margin-bottom: 0;
 }
+
+.error-text{
+    color: red;
+}
+
+.error-div{
+    border-radius: 10px;
+}
