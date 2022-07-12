@@ -1,4 +1,4 @@
-# project-one
+# cute and cuddly
 
 A simple page that links to third party API and provides pictures and a bit of information related to the searchable breed of various cats and dogs for user referance. Individual pages for dog search and cat search. and additioanl page with a game for users to choose which animal they think is cuter.
 
@@ -15,11 +15,11 @@ The score sheet is a modal that appears on screen and the outside area is the cl
 
 Github:
 
-https://github.com/GabrielWarner/project-one
+https://github.com/GabrielWarner/cute-and-cuddly
 
 Deployed Link:
 
-https://gabrielwarner.github.io/project-one/index.html
+https://gabrielwarner.github.io/cute-and-cuddly/
 
 Screenshots:
 
