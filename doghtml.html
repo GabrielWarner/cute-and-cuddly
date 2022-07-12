@@ -7,7 +7,7 @@
     <title>FindAPet Homepage</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="./assets/index/style.css">
+    <link rel="stylesheet" href="./assets/dog/dogStyle.css">
 
 </head>
 <body>
@@ -17,15 +17,16 @@
 <!--Section with input for search-->
 <section id="for-search">
 
-    <a class="waves-effect waves-light btn col m4" id="dogBtn">Click for Cat Mode</a>
+    
 
 
-    <form id="breed-card-form">
-        <label for="search-input" class="sr-only">Search by Breed</label>
-        <input type="text" class="form-control" id="search-input" placeholder="Type breed">
-        <button type="submit" class="waves-effect waves-light btn col m4">Search</button>
+
+    <form class="row" id="breed-card-form">
+        <a class="waves-effect waves-light btn col m4" id="dogBtn">Click for Cat Mode</a>
+        <input type="text" class="form-control col s12 m4 l3" id="search-input" placeholder="Type breed">
+        <button type="submit" class="waves-effect waves-light btn col s12 m4 l3">Search</button>
     </form>
-    <div class="row" id="breed-card">
+    <div class="row breed-card" id="breed-card">
 
     </div>
     
