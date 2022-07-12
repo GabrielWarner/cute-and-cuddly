@@ -1,8 +1,9 @@
+ /* Simple reset for preset browser settingd  */
 * {
     margin: 0;
     padding: 0;
 }
-
+/* styling to center text and image */
 h1 {
     text-align: center;
 }

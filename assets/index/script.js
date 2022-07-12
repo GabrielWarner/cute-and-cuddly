@@ -1,8 +1,11 @@
+// Global Variables created for event listner and on load
 var catBtn = document.getElementById('catBtn')
 var dogBtn = document.getElementById('dogBtn')
+var compBtn = document.getElementById('compareBtn')
+
+//Do we still need these?
 var mainEl = document.getElementById('main')
 var button = document.getElementById('load')
-var compBtn = document.getElementById('compareBtn')
 
 
 
@@ -20,7 +23,8 @@ compBtn.addEventListener('click', function() {
 })
 
 
-/*
+/* one concept was to include a  drop down button that displayed breeds and would trigger search functions 
+
 .dropbtn {
   background-color: #04AA6D;
   color: white;
@@ -60,6 +64,7 @@ compBtn.addEventListener('click', function() {
 button.addEventListener('click', renderCard)
 
 
+ ---------------- One of the first functions coded to request data from API--------------------------------------- 
 
   var dogAPI = "3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854"
   var requestUrl = 'https://api.thedogapi.com/v1/breeds/search?q=golden&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854';
