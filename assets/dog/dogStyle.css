@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #82b1ff;
+}
+
+h1 {
+    text-align: center;
+}
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main a {
+    margin: 5px;
+}
+
+#breed-card-form{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    width: 85%;
+}
+
+
+.info-section{
+display: flex;
+}
+
+.card{
+    background-color: #82b1ff;
+}
+
+.breed-card{
+    background-color: green lighten-3;
+}
