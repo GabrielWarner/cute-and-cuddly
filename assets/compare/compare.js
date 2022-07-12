@@ -26,10 +26,10 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 
-function init() {
-  this.initializeVariables();
-  this.setTitleText(pleasePick);
-  this.callAnimalData();
+function init() {                                                                                                               //start the load
+  this.initializeVariables();                                                                                                   //set all available variables
+  this.setTitleText(pleasePick);                                                                                                //set the subtext title to base instruction, or selected value
+  this.callAnimalData();                                                                                                        //click on image
   console.log(existingGame);
 }
 
@@ -116,10 +116,10 @@ function initializeVariables() {
     tgleBtn.remove('stopCursor');
   }
 }
-function setTitleText(titleVal) {
+function setTitleText(titleVal) {                                                                                               //start of game set instruction, when dog picked set dog title, when cat picked set cat title
   document.getElementById('cutestPet').innerHTML = titleVal;
 }
-async function callAnimalData() {
+async function callAnimalData() {                                                                                               //waits to run call for animal data until both random dog and random cat are called
   await this.rndmCat().then(() => {
     this.rndmDog().then(() => {
       this.addRemoveStop([document.getElementById("picCompare"), document.getElementById('btnCont')], false);
@@ -127,9 +127,9 @@ async function callAnimalData() {
   });
 }
 
-async function rndmDog() {
+async function rndmDog() {                                                                                                      //connects to random dog API to fetch the data
   var rndmsomthng = getRandomInt(0, 250);
-  var requestUrl =
+  var requestUrl =                                                                                                              //grabs the image and all attributes of objects
     "https://api.thedogapi.com/v1/images/search?breeds_id=" +
     rndmsomthng +
     "&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854";
@@ -141,8 +141,8 @@ async function rndmDog() {
       .then(function (data) {
         // console.log("dog", data); // test
 
-        if (data[0].breeds.length > 0) {
-          var newDiv = document.createElement("div");
+        if (data[0].breeds.length > 0) {                                                                                        //as long as there is an entry 
+          var newDiv = document.createElement("div");                                                                                   
           newDiv.textContent = data[0].breeds[0].name;
           dogsName.append(newDiv);
 
@@ -314,7 +314,7 @@ function loadScoreSheet() {
   let scoreHTML = !isEqual ?
     `
       <h1>
-        Hooray! You've selected ${favAnimal.type}'s the most! Selected ${favAnimal.times} times!
+        Hooray! You've selected ${favAnimal.type} the most! Selected ${favAnimal.times} times!
       </h1>
       <br/>
       <br/>
