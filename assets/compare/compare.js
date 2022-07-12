@@ -115,14 +115,6 @@ function initializeVariables() {
   if ((existingGame.dog > 0 || existingGame.cat > 0) && tgleBtn.contains('stopCursor')) {
     tgleBtn.remove('stopCursor');
   }
-
-
-  $('#catImage').load(function () {
-    catImageLoaded();
-  });
-  $('#dogImage').load(function () {
-    dogImageLoaded();
-  });
 }
 function setTitleText(titleVal) {
   document.getElementById('cutestPet').innerHTML = titleVal;
@@ -251,13 +243,6 @@ async function rndmCat() {
       this.rndmCat();
     }, 1000)
   }
-}
-
-function catImageLoaded() {
-  console.log('cat image loaded');
-}
-function dogImageLoaded() {
-  console.log('dog image loaded');
 }
 
 
