@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find-a-cat</title>
+    <!--linking in google fonts, materialize and my own css-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="./assets/cat/catStyle.css">
 </head>
 <body class="blue accent-1">
+    <!--page header-->
     <header>
         <h1>Welcome to Find-a-cat!</h1>
     </header>
     <main>
-        <!--container for buttons-->
+        <!--container for buttons and input-->
         <div class="container row" id="searchContainer">
+                <!--dog mode button-->
                 <a class="waves-effect waves-light btn col s12 m4 l3" id="catBtn">Click for Dog Mode</a>
-                <!-- <div class="row"> -->
+                <!--search bar-->
                 <form class="col s12 m4 l3" id="breed-card-form">
                     <label for="search-input" class="sr-only"></label>
                     <input type="text" class="form-control" id="search-input" placeholder="Type breed">
@@ -28,7 +31,7 @@
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
-                        <h4>Breed List</h4>
+                        <h4>Breed List (you can copy and paste &#128540)</h4>
                         <ul id="modalList">
                             
                         </ul>
@@ -37,20 +40,24 @@
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                     </div>
                 </div>
-            <!-- </div> -->
         </div>
-        <!--container for cat api and info-->
+        <!--colored box for cat image and info-->
         <div id="outsideColor">
+            <!--container for cat data and image-->
             <div class="container row" id="dataContainer">
+                <!--where we append image to-->
                 <div class="container col s8 m6 l6 push-l1" id="catImage">
                     
                 </div>
-                <!--container for petfinder api-->
+                <!--where we append the bio to-->
                 <div class="container col s4 m6 l6 pull-l1" id="catFact">
                 </div>
             </div>
+            <!--container for bottom buttons-->
             <div class="container row" id="bottomBtns">
+                <!--button to cute comparison page-->
                 <a class="waves-effect waves-light btn col s2 m2 l2 pull-l1" id="compareBtn">Which Pet is Cuter?</a>
+                <!--button to home page-->
                 <a class="waves-effect waves-light btn col s2 m2 l1 pull-l1" id="homeBtn">Home</a>
             </div>
         </div>
