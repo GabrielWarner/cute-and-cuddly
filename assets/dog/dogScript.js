@@ -10,6 +10,7 @@ var search = document.getElementById("search-input");
 var breedCardForm = document.getElementById("breed-card-form");
 var mainEl = document.getElementById("main");
 var breedCard = document.getElementById("breed-card");
+var footer = document.getElementById("footer")
 
 function renderCard(event) {
   event.preventDefault();
@@ -22,7 +23,7 @@ function renderCard(event) {
     "https://api.thedogapi.com/v1/breeds/search?q=" +
     breed +
     "&api_key=3ad6ad84-85c0-4f2f-ad38-5b2e4d83c854";
-
+    footer.setAttribute("class", "green lighten-3")
   //initial fetch request
   fetch(requestUrl)
     .then(function (response) {
@@ -61,6 +62,13 @@ function renderCard(event) {
       var breedGroup = document.createElement("p");
       var temperament = document.createElement("p");
 
+      var buttonDiv = document.createElement("div")
+      buttonDiv.setAttribute("class", "row col s12 green lighten-3 center-align")
+
+      homeMode.setAttribute("class", "waves-effect waves-light btn col s2")
+      compBtn.setAttribute("class", "waves-effect waves-light btn offset-s4 col s2")
+
+
       //style
       div.setAttribute("class", "row");
       divLeft.setAttribute("class", "left col s6");
@@ -89,16 +97,17 @@ function renderCard(event) {
       
       cardTitle.textContent = data[0].name;
       cardTitle.setAttribute("class", "green lighten-3")
-      weight.textContent = data[0].weight.imperial; + " lbs"
-      height.textContent = data[0].height.imperial; + " inches"
-      bredFor.textContent = data[0].bred_for;
-      breedGroup.textContent = data[0].breed_group;
-      temperament.textContent = data[0].temperament;
+      weight.textContent = data[0].weight.imperial + " lbs"
+      height.textContent = data[0].height.imperial + " inches"
+      bredFor.textContent = data[0].bred_for
+      breedGroup.textContent = data[0].breed_group
+      temperament.textContent = data[0].temperament
 
 
       
       
       weight.setAttribute("class", "col s12")
+      height.setAttribute("class", "col s12")
       bredFor.setAttribute("class", "col s12")
       breedGroup.setAttribute("class", "col s12")
       temperament.setAttribute("class", "col s12")
@@ -111,7 +120,7 @@ function renderCard(event) {
       cardContent.append(height)
       cardContent.append(bredForHeader)
       cardContent.append(bredFor);
-      cardContent.append(breedGroup)
+      cardContent.append(breedGroupHeader)
       cardContent.append(breedGroup);
       cardContent.append(temperamentHeader)
       cardContent.append(temperament);
@@ -124,7 +133,12 @@ function renderCard(event) {
       breedCard.append(div);
       breedCard.append(divLeft);
       breedCard.append(divRight);
-      breedCard.setAttribute("class", "row green lighten-3")
+
+      buttonDiv.append(compBtn)
+      buttonDiv.append(homeMode)
+      breedCard.append(buttonDiv)
+
+      breedCard.setAttribute("class", "breed-card row green lighten-3")
       divLeft.setAttribute("class", "left col s6 green lighten-3")
       divRight.setAttribute("class", "right col s6 green lighten-3")
 
@@ -152,13 +166,10 @@ function renderCard(event) {
             //creating image element so i can then set its src attribute to the URL i just made
             var image = document.createElement("img");
             image.setAttribute("src", imgURL);
-            image.setAttribute("class", "materialboxed col s12 green lighten-3");
-            //create div that sits inside of Breed Card and holds all of the do
-            var innerCard = document.createElement("div");
-            innerCard.setAttribute("class", "col s6");
+            image.setAttribute("class", "materialboxed col s12 green lighten-3 dog-image");
 
             divLeft.append(image);
-            divRight.append(innerCard);
+            
             var elems = document.querySelectorAll('.materialboxed');
             var instances = M.Materialbox.init(elems);
           });
