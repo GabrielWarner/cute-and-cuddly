@@ -55,10 +55,10 @@ body {
 
 .btnCntnr {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
-    grid-gap: 10%;
-    width: 51%;
+    grid-gap: 5%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
 }

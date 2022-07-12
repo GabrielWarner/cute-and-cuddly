@@ -332,18 +332,22 @@ function loadScoreSheet() {
 }
 
 
+function navigateAway(urlToNavigate) {
+  this.clearData();
+  window.location.href = urlToNavigate;
+}
+
 function clearScoreSheet() {
   if (confirm("This will clear your existing values! Are you Sure?") === true) {
-    existingGame.dog = 0;
-    existingGame.cat = 0;
-    localStorage.setItem('petPicked', JSON.stringify(existingGame));
+    this.clearData();
     this.replay();
   }
 }
-
-function goHome() {
-  window.location.href = "index.html";
-};
+function clearData() {
+  existingGame.dog = 0;
+  existingGame.cat = 0;
+  localStorage.setItem('petPicked', JSON.stringify(existingGame));
+}
 
 function replay() {
   window.location.reload();
